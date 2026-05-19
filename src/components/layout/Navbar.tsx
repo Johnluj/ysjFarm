@@ -40,7 +40,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-primary-green rounded-xl flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform border border-primary-gold">
              <Bird className="text-primary-gold" size={24} />
           </div>
@@ -58,14 +58,14 @@ export default function Navbar() {
               Ibadan, Nigeria
             </p>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className={cn(
                 'text-sm font-medium transition-colors hover:text-primary-gold',
                 location.pathname === link.href
@@ -76,7 +76,7 @@ export default function Navbar() {
               )}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -102,16 +102,16 @@ export default function Navbar() {
             className="md:hidden bg-white border-t mt-3 flex flex-col gap-4 p-6 shadow-2xl rounded-b-3xl"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={cn(
                   'text-lg font-semibold py-2 border-b border-gray-100 last:border-0',
                   location.pathname === link.href ? 'text-primary-gold' : 'text-primary-green'
                 )}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <div className="flex gap-4 mt-4">
               <a href="tel:09131201229" className="flex-1 flex items-center justify-center gap-2 bg-gray-100 py-3 rounded-2xl text-primary-green font-semibold">

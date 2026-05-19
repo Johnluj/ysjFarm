@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Eye, User, Calendar, Award } from 'lucide-react';
+import { Target, Eye, User, Calendar, Award, ShieldCheck } from 'lucide-react';
 
 const values = [
   { title: 'Hygiene', desc: 'Zero tolerance for unsanitary practices in bird management.', icon: ShieldCheck },
@@ -171,6 +171,3 @@ export default function About() {
     </div>
   );
 }
-
-// Fixed import error (ShieldCheck was missing in About.tsx from direct reference)
-import { ShieldCheck } from 'lucide-react';
