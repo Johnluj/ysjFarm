@@ -1,0 +1,115 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "System user with role-based access",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string", "enum": ["ADMIN", "MANAGER", "MD", "STAFF"] }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "BirdBatch": {
+      "title": "Bird Batch",
+      "description": "A batch of birds on the farm",
+      "type": "object",
+      "properties": {
+        "count": { "type": "number" },
+        "type": { "type": "string" },
+        "arrivalDate": { "type": "string", "format": "date" },
+        "expectedHarvest": { "type": "string", "format": "date" },
+        "feedStock": { "type": "number", "description": "Number of feed bags stocked for this batch" },
+        "status": { "type": "string", "enum": ["Growing", "Ready", "Harvested"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["count", "type", "arrivalDate", "status"]
+    },
+    "DailyReport": {
+      "title": "Daily Report",
+      "description": "Daily recording of mortality and feed usage",
+      "type": "object",
+      "properties": {
+        "batchId": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "mortality": { "type": "number" },
+        "feedUsed": { "type": "number" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["batchId", "date", "mortality", "feedUsed", "createdAt"]
+    },
+    "AuthorizedStaff": {
+      "title": "Authorized Staff",
+      "description": "Pre-authorized emails for staff members",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string", "enum": ["STAFF", "MANAGER", "MD", "ADMIN"] },
+        "invitedAt": { "type": "string", "format": "date-time" },
+        "invitedBy": { "type": "string" }
+      },
+      "required": ["email", "name", "role", "invitedAt"]
+    },
+    "Sale": {
+      "title": "Sale Record",
+      "description": "A record of poultry sales",
+      "type": "object",
+      "properties": {
+        "amount": { "type": "number" },
+        "date": { "type": "string", "format": "date" },
+        "customer": { "type": "string" },
+        "status": { "type": "string", "enum": ["Paid", "Pending"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["amount", "date", "customer", "status"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Feedbacks or observations from staff on batches or sales",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "entityId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["text", "authorId", "entityId", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and roles"
+    },
+    "/birdBatches/{batchId}": {
+      "schema": "BirdBatch",
+      "description": "Poultry batches"
+    },
+    "/dailyReports/{reportId}": {
+      "schema": "DailyReport",
+      "description": "Daily mortality and feed usage records"
+    },
+    "/authorizedStaff/{email}": {
+      "schema": "AuthorizedStaff",
+      "description": "Pre-authorized staff emails"
+    },
+    "/sales/{saleId}": {
+      "schema": "Sale",
+      "description": "Sales logs"
+    },
+    "/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Discussions on records"
+    }
+  }
+}
