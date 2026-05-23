@@ -7,7 +7,7 @@ import { ShieldCheck, Leaf, Truck, Users, Activity, HeartPulse } from 'lucide-re
 const whyChooseUs = [
   { title: 'Hygienic Environment', icon: ShieldCheck, desc: 'Our facility maintains strict bio-security standards to ensure zero contamination.' },
   { title: 'Healthy Bird Management', icon: HeartPulse, desc: 'Expert veterinary supervision and premium feed for optimal bird health.' },
-  { title: 'Reliable Supply', icon: Truck, desc: 'Timed logistics ensuring your frozen products arrive fresh and on schedule.' },
+  { title: 'Reliable Supply', icon: Truck, desc: 'Efficient logistics ensuring prompt delivery of poultry, maize, and raw cashews.' },
   { title: 'Quality Assurance', icon: Leaf, desc: '100% natural growth processes without harmful inorganic additives.' },
   { title: 'Experienced Team', icon: Users, desc: 'Professional poultry managers with decades of combined industry experience.' },
   { title: 'Customer First', icon: Activity, desc: 'Tailored solutions for large-scale distributors and small caterers alike.' },
@@ -114,7 +114,7 @@ export default function Home() {
               Ready to Upgrade Your Supply Chain?
             </h2>
             <p className="text-primary-green/80 text-lg max-w-2xl mx-auto font-medium">
-              Join Ibadan's most successful distributors and food businesses. Secure your stock of premium poultry today.
+              Join Ibadan's most successful agribusiness distributors and partners. Secure your crops and premium poultry today.
             </p>
           </div>
 

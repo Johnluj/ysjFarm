@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Bird, Snowflake, Package, Truck, ShieldCheck, Zap } from 'lucide-react';
+import { Bird, Sprout, Package, Trees, ShieldCheck, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -10,10 +10,10 @@ const services = [
     image: '/assets/images/hero_poultry_farm.png',
   },
   {
-    title: 'Frozen Chicken Supply',
-    desc: 'Hygienically processed and blast-frozen chicken ready for market.',
-    icon: Snowflake,
-    image: '/assets/images/poultry_distribution.png',
+    title: 'Maize Farming',
+    desc: 'Cultivating high-yield, premium-grade yellow and white maize for agri-processing and custom feed compounding.',
+    icon: Sprout,
+    image: '/assets/images/maize_farming_field.png',
   },
   {
     title: 'Poultry Brooding',
@@ -22,10 +22,10 @@ const services = [
     image: '/assets/images/poultry_chicks.png',
   },
   {
-    title: 'Bulk Distribution',
-    desc: 'Reliable supply chain for hotels, caterers, and major food outlets.',
-    icon: Truck,
-    image: '/assets/images/poultry_distribution.png',
+    title: 'Cashew Farming',
+    desc: 'Sustainable cultivation and bulk distribution of premium, uniform export-grade raw cashew nuts.',
+    icon: Trees,
+    image: '/assets/images/cashew_farming_harvest.png',
   },
 ];
 

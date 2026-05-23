@@ -1,34 +1,38 @@
 import { motion } from 'motion/react';
-import { Bird, Snowflake, Package, Truck, Zap, Activity, CheckCircle2 } from 'lucide-react';
+import { Bird, Sprout, Trees, Zap, Activity, CheckCircle2 } from 'lucide-react';
 
 const serviceDetails = [
   {
     title: 'Commercial Broiler Production',
     icon: Bird,
+    image: '/assets/images/hero_poultry_farm.png',
     desc: 'Our flagship service focusing on massive production of healthy, heavy-weight broilers. We use scientifically formulated diets and climate-controlled housing for optimal growth.',
     highlights: ['Vaccinated Stock', 'Bio-Secure Housing', 'Growth Monitoring', 'Sustainable Feed'],
     cta: 'Discuss Production Capacity'
   },
   {
-    title: 'Frozen Chicken Supply',
-    icon: Snowflake,
-    desc: 'Hygienically processed, blast-frozen chicken parts and whole birds. Processed in an ultra-clean environment under strict supervision.',
-    highlights: ['Instant Freezing', 'Perfect Packaging', 'Clean Processing', 'Quality Inspection'],
-    cta: 'Place Market Order'
+    title: 'Maize Farming',
+    icon: Sprout,
+    image: '/assets/images/maize_farming_field.png',
+    desc: 'Cultivating premium, high-yield yellow and white maize. We employ modern sustainable agronomy practices and soil conditioning to power processing and Nigeria\'s animal feed industry.',
+    highlights: ['High-Yield Seeds', 'Modern Irrigation', 'Soil Conditioning', 'Strategic Harvesting'],
+    cta: 'Place Maize Order'
   },
   {
     title: 'Poultry Brooding Services',
     icon: Zap,
+    image: '/assets/images/poultry_chicks.png',
     desc: 'We take the risk out of early-stage poultry farming. Our brooding specialists manage chicks from day old to four weeks, ensuring high survival rates.',
     highlights: ['Temperature Control', 'Early Immunization', 'Expert Monitoring', 'Reduced Mortality'],
     cta: 'Enquire About Brooding'
   },
   {
-    title: 'Bulk Poultry Supply',
-    icon: Package,
-    desc: 'Tailored for large outlets, caterers, and hotels requiring consistent, large-scale poultry deliveries on a regular basis.',
-    highlights: ['Schedule Deliveries', 'Volume Discounting', 'Consistent Weights', 'Contract Supply'],
-    cta: 'Supply Partnership'
+    title: 'Cashew Farming & Processing',
+    icon: Trees,
+    image: '/assets/images/cashew_farming_harvest.png',
+    desc: 'Growing and distributing premium export-grade raw cashew nuts (RCN). Handpicked, cleanly processed, and stored under ideal moisture control for distributors and processing plants.',
+    highlights: ['Premium Kernel Grade', 'Moisture Controls', 'Sustainable Harvesting', 'Export-Quality Sizing'],
+    cta: 'Enquire for Bulk Supply'
   },
 ];
 
@@ -50,7 +54,7 @@ export default function Services() {
                Our Professional <span className="text-primary-gold underline decoration-primary-gold/30">Services</span>
              </h1>
              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-               Providing the backbone of Nigeria's poultry supply chain through innovation, hygiene, and scale.
+               Providing the backbone of Nigeria's poultry feed and agro-commodity supply chain through innovation and scale.
              </p>
            </motion.div>
         </div>
@@ -71,14 +75,10 @@ export default function Services() {
                 <div className="absolute inset-0 bg-primary-green/5 rounded-[4rem] group-hover:scale-105 transition-transform duration-700"></div>
                 <div className="relative aspect-square md:aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
                    <img 
-                    src={[
-                      '/assets/images/hero_poultry_farm.png',
-                      '/assets/images/poultry_distribution.png',
-                      '/assets/images/poultry_chicks.png',
-                      '/assets/images/poultry_distribution.png'
-                    ][i]} 
+                    src={service.image} 
                     alt={service.title} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                    referrerPolicy="no-referrer"
                    />
                    <div className="absolute top-8 left-8 w-16 h-16 bg-white/90 backdrop-blur shadow-2xl rounded-2xl flex items-center justify-center text-primary-gold border border-white/50">
                       <service.icon size={32} />

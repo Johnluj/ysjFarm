@@ -3,9 +3,9 @@ import { useInView } from 'motion/react';
 import { useRef, useEffect, useState } from 'react';
 
 const stats = [
-  { label: 'Birds Managed', value: 7000, suffix: '+' },
+  { label: 'Birds Managed', value: 20000, suffix: '+' },
   { label: 'Farm Facility', value: 10, suffix: ' Acres' },
-  { label: 'Since', value: 2023, suffix: '' },
+  { label: 'Since', value: 2016, suffix: '' },
   { label: 'Monthly Capacity', value: 2500, suffix: '+' },
 ];
 
@@ -35,7 +35,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-display font-bold text-4xl md:text-5xl text-primary-green">
+    <span ref={ref} className="block text-center font-display font-bold text-3xl sm:text-4xl md:text-5xl text-primary-green whitespace-nowrap">
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -53,7 +53,7 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white p-8 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] text-center space-y-2 border-b-4 border-primary-gold hover:-translate-y-2 transition-transform"
+              className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] text-center space-y-2 border-b-4 border-primary-gold hover:-translate-y-2 transition-transform"
             >
               <Counter value={stat.value} suffix={stat.suffix} />
               <p className="text-gray-500 text-sm font-semibold uppercase tracking-widest">{stat.label}</p>

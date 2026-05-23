@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Ibadan's leading provider of premium commercial broilers and hygienically processed frozen chicken. Quality, health, and reliability since 2023.
+            Ibadan's leading provider of premium commercial broilers, high-yield maize, and raw cashew nuts. Quality, health, and reliability since 2016.
           </p>
           <div className="flex gap-4">
             {[Instagram, Facebook, Twitter].map((Icon, idx) => (

@@ -28,7 +28,7 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-gray-300 text-lg leading-relaxed"
             >
-              Founded in 2023, YSJ Farm Ibadan has rapidly grown into a cornerstone of the Ibadan agricultural landscape, merging traditional farming ethics with modern scientific management.
+              Founded in 2016, YSJ Farm Ibadan has rapidly grown into a cornerstone of the Ibadan agricultural landscape, merging traditional farming ethics with modern scientific management.
             </motion.p>
           </div>
         </div>
@@ -144,10 +144,10 @@ export default function About() {
             
             <div className="grid lg:grid-cols-4 gap-12 relative z-10">
               {[
-                { year: '2023', event: 'Founded & First 500 birds batch' },
-                { year: '2024', event: 'Expanded to 5,000 birds capacity' },
-                { year: 'Early 2025', event: 'Launch of commercial processing' },
-                { year: 'Present', event: '7,000+ birds & Nationwide supply network' },
+                { year: '2016', event: 'Founded & First 500 birds batch' },
+                { year: '2019', event: 'Expanded to 10,000 birds capacity' },
+                { year: '2023', event: 'Launch of commercial processing' },
+                { year: 'Present', event: '20,000+ birds & Nationwide supply network' },
               ].map((step, i) => (
                 <motion.div 
                   key={i}
