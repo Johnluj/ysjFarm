@@ -16,10 +16,10 @@ const whyChooseUs = [
 const galleryImages = [
   '/assets/images/poultry_chicks.png',
   '/assets/images/poultry_coop.png',
-  '/assets/images/poultry_distribution.png',
+  '/assets/images/home_gallery_final.png',
   '/assets/images/hero_poultry_farm.png',
-  '/assets/images/mr_sam_founder.png',
-  '/assets/images/poultry_chicks.png',
+  '/assets/images/maize_farming_field.png',
+  '/assets/images/cashew_farming_harvest.png',
 ];
 
 export default function Home() {
