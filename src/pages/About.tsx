@@ -75,59 +75,59 @@ export default function About() {
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Management Section */}
       <section className="py-24 bg-soft-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="text-center space-y-4 mb-20">
+            <h2 className="text-primary-gold font-bold uppercase tracking-widest text-sm">Our Leadership</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-primary-green">Management Team</h3>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100"
             >
               <div className="relative group">
                 <div className="absolute -inset-4 bg-primary-gold/20 rounded-[3rem] blur-xl group-hover:bg-primary-gold/40 transition-all"></div>
                 <img 
-                  src="/assets/images/mr_sam_founder.png" 
-                  alt="Mr Sam Founder" 
-                  className="relative rounded-[3rem] w-full shadow-2xl"
+                  src="/assets/images/about_management_final.png"
+                  alt="Madam YSJ (MD) and Mr. Sam (Deputy MD)"
+                  className="relative rounded-[2rem] w-full object-cover shadow-2xl"
                 />
               </div>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:w-1/2 space-y-8"
-            >
-              <div className="space-y-2">
-                <h2 className="text-primary-gold font-bold uppercase tracking-widest text-sm">The Visionary</h2>
-                <h3 className="text-4xl md:text-5xl font-display font-bold text-primary-green">Leadership of Mr Sam</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Under the strategic direction of Mr Sam, YSJ Farm was established with a single goal: to bridge the gap between quality production and commercial accessibility in the poultry industry.
-              </p>
-              <div className="space-y-4">
-                 {[
-                   'Pioneer in bio-secure farming',
-                   'Advocate for sustainable agriculture',
-                   'Strategic supply chain enthusiast',
-                   'Dedicated to youth empowerment in farming'
-                 ].map((point, i) => (
-                   <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-3"
-                   >
-                      <div className="w-6 h-6 rounded-full bg-primary-green/10 flex items-center justify-center text-primary-green">
-                         <div className="w-2 h-2 bg-primary-green rounded-full"></div>
-                      </div>
-                      <span className="text-gray-700 font-medium">{point}</span>
-                   </motion.div>
-                 ))}
+              <div className="space-y-10">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary-green/10 rounded-xl flex items-center justify-center text-primary-green">
+                      <User size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-display font-bold text-primary-green">Madam YSJ</h4>
+                      <p className="text-primary-gold font-bold uppercase tracking-widest text-xs">Managing Director</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    Madam YSJ provides the core vision and operational oversight for YSJ Farm. Her dedication to quality and hygienic standards drives our commitment to excellence in every aspect of poultry production.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary-gold/10 rounded-xl flex items-center justify-center text-primary-gold">
+                      <User size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-display font-bold text-primary-green">Mr. Sam</h4>
+                      <p className="text-primary-gold font-bold uppercase tracking-widest text-xs">Deputy Managing Director</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    Mr. Sam spearheads our strategic growth and supply chain management. His expertise in bio-secure farming and commercial accessibility ensures that YSJ Farm remains a leader in the industry.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
